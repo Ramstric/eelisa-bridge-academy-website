@@ -1,0 +1,408 @@
+---
+import '../styles/global.css'
+
+import StandardLayout from '../layouts/StandardLayout.astro';
+import Button from '../components/Button.astro';
+import Socials from '../components/Socials.astro';
+---
+
+<StandardLayout pageTitle="Home">
+	<div class="hero">
+		<div class="hero-grid">
+			<img src="/esn-upm-website/images/hero-small-1.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-2.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-3.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-4.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-5.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-6.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-7.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-8.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-9.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-10.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-11.png" alt="ESN Madrid UPM">
+			<img src="/esn-upm-website/images/hero-small-12.png" alt="ESN Madrid UPM">
+		</div>
+
+		<div class="hero-description">
+			<img id="long-title" src="/esn-upm-website/images/hero-title.png" alt="ESN Madrid UPM">
+			<img id="short-title" src="/esn-upm-website/images/hero-title-center.png" alt="ESN Madrid UPM">
+
+			<p>
+				<blue>E</blue>rasmus <green>S</green>tudent <pink>N</pink>etwork <b>(<blue>E</blue><green>S</green><pink>N</pink>)</b> es una de las mayores asociaciones de estudiantes sin ánimo de lucro en Europa, fundada en 1989 para la ayuda y el desarrollo del intercambio de estudiantes. 
+				<br><br>
+				Estamos presentes en 520 Instituciones de 42 países.
+			</p>
+
+			<Button innerHtml="<p-btn> More about us... </p-btn>" type="invert normal-font" link="/" bgcolor="var(--background)" labelcolor="var(--primary-color)" link="https://esnupm.org/quienessomos"/>
+		</div>
+	</div>
+
+	<div class="first-steps">
+		<div class="centered-blur">
+			<p>
+				<orange><i>¡No olvides</i></orange> echar un vistazo a nuestra <orange><i>guía de primeros pasos</i></orange> para estudiantes internacionales<orange><i>!</i></orange>
+			</p>
+			<Button innerHtml="<p-btn>¡Primeros pasos!</p-btn>" type="invert" bgcolor="var(--orange)" labelcolor="var(--background)" link="https://esnupm.org/es/firststeps"/>
+		</div>
+	</div>
+
+	<div class="esncard">
+		<h3>
+			Únete a la comunidad Erasmus y consigue tu <ibm><i><blue>ESN</blue>card</i></ibm>
+		</h3>
+
+		<img src="/esn-upm-website/images/esncard-2.png" height="325" alt="ESN Madrid UPM">
+
+		<p>
+			La tarjeta de membresía de la Red de Estudiantes Erasmus te da acceso a todas las actividades que ofrece ESN...
+		</p>
+
+		<div class="discounts">
+			<img src="/esn-upm-website/images/descuento-1.png" width="100" alt="Descuento 1">
+			<img src="/esn-upm-website/images/descuento-2.png" width="100" alt="Descuento 2">
+			<img src="/esn-upm-website/images/descuento-3.png" width="100" alt="Descuento 3">
+			<img src="/esn-upm-website/images/descuento-4.png" width="100" alt="Descuento 4">
+		</div>
+
+		<p>
+			...y <blue>cientos de descuentos</blue> en toda Europa durante 12 meses!
+		</p>
+
+		<div class="esncard-btns">
+			<Button innerHtml="<p-btn>¡Consíguela <blue>ya</blue>!</p-btn>" type="invert" bgcolor="var(--primary-color)" labelcolor="white" link="https://esnupm.org/esncard"/>
+			<Button innerHtml="<p-btn>Horarios de oficina</p-btn>" type="invert" bgcolor="white" labelcolor="var(--primary-color)" link="https://esnupm.org/horarios"/>
+		</div>
+	</div>
+
+	<div class="map">
+		<div class="marker-tab">
+			<img src="/esn-upm-website/images/marker.svg" width="24" alt="Marker icon">
+			<p>We are here</p>
+		</div>
+
+		<div class="map-embed">
+			<iframe src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m4!2m1!1sEscuela+T%C3%A9cnica+Superior+de+Edificaci%C3%B3n+UPM%2C+Ciudad+Universitaria%2C+Av.+de+Juan+de+Herrera%2C+6%2C+28040+Madrid!5e0!6i14!5m1!1sen" style="border:0;" loading="lazy"></iframe>
+		</div>
+	</div>
+
+	<div class="events">
+		<div class="events-description">
+			<h3><purple><i>¿</i></purple>Estás listo para <purple><i>divertirte?</i></purple></h3>
+			<p>¡Recuerda revisar el calendario de eventos para que no te pierdas niguno!</p>
+			
+			<Button innerHtml="<p-btn>¡Llevame al calendario de eventos!</p-btn>" type="invert" bgcolor="#532AFF" labelcolor="white" link="https://esnupm.org/es/eventos"/>
+			
+			<p>Tambien recuerda seguirnos en nuestras <pink>redes sociales</pink>. ¡Siempre que lo necesites, puedes mandarnos mensaje!</p>
+			
+			<Socials size="40" styleGap="big" focusMail/>
+		</div>
+
+		<img id="esnpeople-event" src="/esn-upm-website/images/esnpeople.png" alt="ESN People">
+	</div>
+
+
+</StandardLayout>
+
+<!-- ------ Local style ------ -->
+
+<style>
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+
+		background-color: var(--primary-color);
+		
+		overflow: hidden;
+	}
+
+	.hero-grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5px;
+		width: 120%;
+		justify-content: center;
+	}
+
+	.hero-grid img {
+		width: 80px;
+	}
+
+	.hero-img {
+		width: 100%;
+		height: 340px;
+
+		background-image: url('/esn-upm-website/images/hero.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+
+	#long-title {
+		display: none;
+	}
+
+	#short-title {
+		width: 100%;
+	}
+
+	#header-title {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	#header-title img {
+		width: clamp(2.5rem, 1.2rem + 2.721vw, 5rem);
+	}
+
+	.hero-description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+        box-sizing: border-box;
+
+		width: 100%;
+		height: fit-content;
+		padding: 35px 15px;
+		gap: 25px;
+
+		text-align: center;
+
+		color: white;
+	}
+
+    /* ------ First steps ------ */
+
+	.first-steps {
+		background-image: url('/esn-upm-website/images/welcome-banner-cropped.png');
+		background-size: cover;
+		background-position: center;
+		box-sizing: border-box;
+
+		width: 100%;
+		height: 300px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		z-index: 1;
+
+		border: 4px solid var(--orange);
+	}
+
+	.centered-blur {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		box-sizing: border-box;
+
+		padding: 20px 25px;
+		width: 100%;
+		gap: 25px;
+
+		text-align: center;
+
+		backdrop-filter: blur(30px);
+	}
+
+
+	/* ------ ESN Card ------ */
+
+	.esncard {
+		width: 100%;
+		height: 850px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		box-sizing: border-box;
+		gap: 30px;
+		padding: 0 20px;
+		
+		background-color: #C3EFFF;
+
+		text-align: center;
+	}
+
+	.discounts {
+		display: flex;
+		justify-content: center;
+	}
+
+	.discounts > * {
+		margin-left: -20px;
+		box-shadow: 0px 0px 12px 2px black;
+	}
+
+	.esncard-btns {
+		display: flex;
+		gap: 20px;
+	}
+
+	/* ------ Map ------ */
+
+	.map {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+
+		background-color: #C3EFFF;
+	}
+
+	.marker-tab {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		height: 40px;
+		padding: 0 45px 20px 45px;
+
+		border-radius: 25px;
+
+		background-color: var(--pink);
+		color: white;
+	}
+
+	.map-embed {
+		box-sizing: border-box;
+		margin-top: -20px;
+
+		width: 100%;
+		height: 300px;
+
+		border: 5px solid var(--pink);
+	}
+
+	.map-embed iframe {
+		width: 100%;
+		height: 100%;
+	}
+
+	/* ------ Events ------ */
+
+	.events {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		
+		gap: 50px;
+		padding-top: 100px;
+
+		background-color: #D6CBFF;
+	}
+
+	.events-description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		gap: 30px;
+
+		padding: 0 30px;
+		text-align: center;
+	}
+
+	#esnpeople-event{
+		width: 100%;
+	}
+
+	
+	@media (min-width: 768px) {
+		.hero {
+			flex-direction: row;
+			height: 720px;
+		}
+
+		.hero-img {
+			display: none;
+		}
+
+		.hero-grid {
+			display: inline-flex;
+			gap: clamp(0.625rem, -2.5rem + 4.348vw, 3.125rem);
+
+			width: 70%;
+			justify-content: left;
+		}
+
+		.hero-grid img {
+			width: auto;
+		}
+
+		#short-title {
+			display: none;
+		}
+
+		#long-title {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.hero-description {
+			height: 100%;
+			gap: 70px;
+			
+			padding: 0 40px 0 0;
+			text-align: right;
+		}
+
+		/* ------ First steps ------ */
+
+		.first-steps {
+			height: 450px;
+		}
+
+		.centered-blur {
+			padding: 40px 25px;
+		}
+
+		/* ------ Map ------ */
+
+		.map-embed {
+			height: 400px;
+		}
+		
+		/* ------ Events ------ */
+
+		.events {
+			flex-direction: row;
+			padding-top: 0;
+			height: 600px;
+			width: 100%;
+		}
+
+		#esnpeople-event{
+			object-fit: cover;
+			max-width: 40%;
+			height: 100%;
+		}
+
+        footer{
+            height: 295px;
+        }
+
+    }
+</style>
