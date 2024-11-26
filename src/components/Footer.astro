@@ -1,0 +1,40 @@
+
+<footer transition:name="footer">
+    <div class="legal-text">
+        <a>Terms and conditions</a>
+        <a>Privacy policy</a>
+        <a>Cookies policy</a>
+    </div>
+</footer>
+
+<style>
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 195px;
+        gap: 30px;
+
+        background-color: var(--blue-dark);
+    }
+
+    .legal-text {
+        display: inline-block;
+        text-align: center;
+
+        width: 100%;
+
+        color: white;
+    }
+
+    .legal-text a {
+        color: var(--blue-light);
+    }
+
+    a::after {
+        color: #ffffff;
+        content: " | ";
+    }
+</style>

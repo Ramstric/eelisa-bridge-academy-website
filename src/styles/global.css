@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  src: url('/eelisa-bridge-academy-website/fonts/Inter-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-style: italic;
+  src: url('/eelisa-bridge-academy-website/fonts/Inter-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+pink{color:var(--pink);}
+
+:root {
+  /* --------------- Desktop Font Options --------------- */
+  --h1-desktop: clamp(2.875rem, 2.4rem + 0.816vw, 3.625rem); /* 58px to 46px */
+  --h3-desktop: clamp(1.125rem, 0.857rem + 0.714vw, 1.5rem);    /* 24px to 18px */
+
+  --p-desktop: clamp(0.938rem, 0.823rem + 0.408vw, 1.313rem);  /* 21px to 15px */
+  
+  --footer-desktop: clamp(0.625rem, 0.51rem + 0.408vw, 1rem);  /* 16px to 10px */
+
+  /* ------- Mobile Font Options - 450px to 320px ------- */
+  
+  --h1-mobile: 32px;
+  --h2-mobile: 24px;
+  --h3-mobile: 18px;
+
+  --p-mobile: 14px;
+  --footer-mobile: 10px;
+
+  /* ---------------------- Colors ---------------------- */
+  --background : #ffffff;
+
+  --primary-color: #1D1D1B;
+  --secondary-color: #a7a7a7;
+
+  --blue-light: #54B1EA;
+  --blue-dark: #182025;
+  --blue: #093550;
+  --orange: #DF723A;
+  --yellow: #EAA12B;
+
+  --btn-roundness: 25;
+  --card-roundness: 15;
+}
+
+/* ------------------ Common elements ------------------ */
+
+* {
+  font-family: Inter, serif;
+  font-weight: 450;
+}
+
+html {
+  background-color: var(--background);
+  font-optical-sizing: auto;
+  /*overflow-x: hidden;*/
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+
+
+h1 {
+  font-size: var(--h1);
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-weight: 400;
+  margin: 0;
+}
+
+p{
+  font-size: var(--p);
+  font-weight: 300;
+  margin: 0;
+}
+
+p-btn{
+  font-size: var(--p);
+  font-weight: 500;
+  margin: 0;
+}
+
+nav p, nav a {
+  font-size: clamp(0.875rem, 0.719rem + 0.313vw, 1rem); /* Font 16px to 14px, VW 1440px to 800px */
+  font-weight: 450;
+}
+
+
+p-btn > *{
+  font-size: var(--p);
+  font-weight: 500;
+  margin: 0;
+}
+
+footer *{
+  font-size: var(--footer);
+  font-weight: 350;
+}
+
+i {
+  font-weight: bold;
+}
+
+a {text-decoration: none; color: #9d9d9d;transition: all 0.25s ease;}
+
+
+blue {color: var(--blue-light);}
+green {color: var(--green);}
+orange {color: var(--orange);}
+pink {color: var(--pink);}
+purple {color: var(--purple);}
+gray {color: var(--gray);}
