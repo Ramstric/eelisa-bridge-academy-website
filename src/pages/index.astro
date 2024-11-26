@@ -3,6 +3,7 @@ import '../styles/global.css'
 
 import StandardLayout from '../layouts/StandardLayout.astro';
 import Button from '../components/Button.astro';
+import SmallMobileCard from '../components/SmallMobileCard.astro';
 ---
 
 <StandardLayout pageTitle="Home">
@@ -10,16 +11,51 @@ import Button from '../components/Button.astro';
 		<div class="hero-img">
 			<img id="hero-logo" src="/eelisa-bridge-academy-website/images/logo.png" alt="SkillBridge Logo" />
 		</div>
+
 		<div class="hero-desc">
-			<div class="subtitle">
+			<div class="hero-desc-subtitle">
 				<h1>Building bridges for...</h1>
 				<h1>...a skilled student</h1>
 			</div>
-			<div class="description">
+
+			<div>
 				<h2>SkillBridge closes the gap between what you learn in school and what the industry demands, creating a seamless path for your success.</h2>
-				<Button innerHtml="<p>Start your journey!</p>" type="invert normal-font" link="/" bgcolor="var(--orange)" labelcolor="var(--background)" link=""/>
+				<Button innerHtml="<p-btn>Start your journey!</p-btn>" type="invert normal-font" link="/" bgcolor="var(--orange)" labelcolor="var(--background)" link=""/>
 			</div>
-		</div>	
+		</div>
+	</div>
+
+	<div class="offer">
+		<h1>What we offer...</h1>
+		<div class="cards">
+			<SmallMobileCard type="horizontal" title="Curriculum-Aligned Guidance" desc="From workshops to tailored learning paths, we keep you up to industry standards!" img="https://placehold.co/200" />
+			<SmallMobileCard type="horizontal" title="Meaningful Internships" desc="We collaborate with top companies and allow you to apply your skills in a professional setting!" img="https://placehold.co/200" />
+			<SmallMobileCard type="horizontal" title="Expert Mentorship" desc="Our mentors offer personalized advice, career planning, and insider knowledge!" img="https://placehold.co/200" />
+			<SmallMobileCard type="horizontal" title="Applied Projects" desc="Showcase your creativity and problem-solving skills while building a portfolio that stands out to employers!" img="https://placehold.co/200" />	
+		</div>
+
+	</div>
+
+	<div class="why-us">
+		<h1>Why choose SkillBridge?</h1>
+		<p>With a vision to create a world where every student enters the workforce equipped, confident, and ready to excel—building a stronger connection between academia and industry.</p>
+		
+		<div class="cards">
+			<SmallMobileCard type="vertical" title="Real-World Relevance" img="https://placehold.co/200" />
+			<SmallMobileCard type="vertical" title="Personalized Support" img="https://placehold.co/200" />
+			<SmallMobileCard type="vertical" title="Career Readiness" img="https://placehold.co/200" />
+		</div>
+	</div>
+
+	<div class="join-us">
+		<h1>Ready to build Your future?</h1>
+
+		<div class="description">
+			<h2>Don’t wait to take the next step!</h2>
+			<h3>Join SkillBridge today and transform your education into a launchpad for success.</h3>
+		</div>
+
+		<Button innerHtml="<p-btn>Join now!</p-btn>" type="invert normal-font" link="/" bgcolor="var(--orange)" labelcolor="var(--background)" link=""/>
 	</div>
 </StandardLayout>
 
@@ -27,69 +63,91 @@ import Button from '../components/Button.astro';
 
 <style>
 	.hero {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		width: 100%;
-
 		background-color: var(--blue-dark);
-		
-
 		color: white;
 	}
 
 	.hero-img {
-		width: 100%;
+		justify-content: flex-end;
+
 		padding: 15px 0;
+		height: 300px;
+
+		background-color: #f0f8ff;
 	}
 
 	.hero-desc {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		width: 100%;
 		padding: 25px 15px 125px 15px;
-
-		background-color: red;
 		gap: 50px;
+		height: fit-content;
 	}
 
-	.hero-desc .subtitle {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		width: 100%;
-
-		background-color: blue;
-	
+	.hero-desc div {
+		height: fit-content;
 	}
 
-	.hero-desc .description {
-		background-color: var(--blue);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		width: 100%;
+	.hero-desc div:nth-child(1) {
+		padding: 0 10px;
+		gap: 10px;
 	}
+	.hero-desc h1:nth-child(2) {text-align: end;}
 
-	.hero-desc .description h2 {
-		width: 100%;
-		text-align: center;
-	}
+	.hero-desc div:nth-child(2) {gap: 34px;}
+	.hero-desc h2 {text-align: center;}
 
-	
 
 	#hero-logo {
 		width: 100%;
 		max-width: 100px;
+	}
+
+
+
+
+
+	.offer {
+		height: fit-content;
+		padding: 100px 25px;
+		gap: 50px;
+		background-color: #ECF8FF;
+		text-align: center;
+	}
+
+	.offer .cards {
+		height: fit-content;
+		gap: 50px;
+	}
+
+
+
+
+	.why-us {
+		height: fit-content;
+		padding: 100px 25px;
+		gap: 25px;
+		background-color: #FFE4D6;
+		text-align: center;
+	}
+
+	.why-us .cards {
+		height: fit-content;
+		gap: 50px;
+		padding: 0 95px;
+	}
+
+
+
+	.join-us {
+		height: fit-content;
+		padding: 275px 10px;
+		gap: 50px;
+		background-color: #FFF3E1;
+		text-align: center;
+	}
+
+	.join-us .description {
+		height: fit-content;
+		gap: 25px;
 	}
 
 </style>

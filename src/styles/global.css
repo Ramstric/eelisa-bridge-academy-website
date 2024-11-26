@@ -29,6 +29,8 @@ pink{color:var(--pink);}
   --h3-mobile: 18px;
 
   --p-mobile: 14px;
+  --p-btn-mobile: 20px;
+
   --footer-mobile: 10px;
 
   /* ---------------------- Colors ---------------------- */
@@ -43,8 +45,8 @@ pink{color:var(--pink);}
   --orange: #DF723A;
   --yellow: #EAA12B;
 
-  --btn-roundness: 25;
-  --card-roundness: 15;
+  --btn-roundness: 25px;
+  --card-roundness: 15px;
 }
 
 /* ------------------ Common elements ------------------ */
@@ -52,7 +54,19 @@ pink{color:var(--pink);}
 * {
   font-family: Inter, serif;
   font-weight: 450;
+  width: 100%;
+  
+  box-sizing: border-box;
+  margin: 0;
 }
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 html {
   background-color: var(--background);
@@ -65,30 +79,27 @@ html {
 
 
 h1 {
-  font-size: var(--h1);
+  font-size: var(--h1-mobile);
   font-weight: 500;
-  margin: 0;
 }
 
 h2 {
-  font-size: var(--h2);
+  font-size: var(--h2-mobile);
 }
 
 h3 {
+  font-size: var(--h3-mobile);
   font-weight: 400;
-  margin: 0;
 }
 
 p{
-  font-size: var(--p);
+  font-size: var(--p-mobile);
   font-weight: 300;
-  margin: 0;
 }
 
 p-btn{
-  font-size: var(--p);
+  font-size: var(--p-btn-mobile);
   font-weight: 500;
-  margin: 0;
 }
 
 nav p, nav a {
@@ -98,9 +109,8 @@ nav p, nav a {
 
 
 p-btn > *{
-  font-size: var(--p);
+  font-size: var(--h3-mobile);
   font-weight: 500;
-  margin: 0;
 }
 
 footer *{

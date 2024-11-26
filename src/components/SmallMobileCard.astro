@@ -1,0 +1,58 @@
+---
+const { type, title, desc, img} = Astro.props;
+
+const cardType = `${type}`;
+---
+
+<div class={cardType}>
+    <img src={img} alt={title} />
+
+    <div>
+        <h3>{title}</h3>
+        <p>{desc}</p>
+    </div>
+
+</div>
+
+<!-- ------ Local style ------ -->
+
+<style>
+    .horizontal {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        text-align: start;
+
+        height: fit-content;
+    }
+
+    .horizontal div{
+        height: fit-content;
+        gap: 5px;
+    }
+
+    .horizontal img {
+        object-fit: none;
+        width: 35%;
+        height: 100%;
+        border-radius: var(--card-roundness);
+    }
+
+    .horizontal h3 {
+        font-weight: 600;
+    }
+
+
+    .vertical {
+        gap: 10px;
+        text-align: center;
+        height: fit-content;
+    }
+
+    .vertical img {
+        object-fit: none;
+        height: 150px;
+        border-radius: var(--card-roundness);
+    }
+
+</style>
