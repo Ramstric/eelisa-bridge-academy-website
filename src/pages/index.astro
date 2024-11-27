@@ -8,13 +8,23 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 
 <StandardLayout pageTitle="Home">
 	<div class="hero">
-		<img id="hero-logo" src="/eelisa-bridge-academy-website/images/logo.png" alt="SkillBridge Logo" />
+		<div class="logo">
+			<img id="hero-logo" src="/eelisa-bridge-academy-website/images/logo.png" alt="SkillBridge Logo" />
+		</div>
 		<img id="hero-img" src="https://placehold.co/500" alt="SkillBridge Logo" />
 
 		<div class="hero-desc">
 			<div class="hero-desc-subtitle">
 				<h1>Building <i style="color: var(--yellow);">bridges</i> for...</h1>
-				<h1>...skilled <i id="skilled-person" style="color: var(--orange);">students</i></h1>
+				<div id="animated-text-viewport">
+					<h1>...skilled</h1>
+					<div id="animated-text-moving">
+						<h1>students</h1>
+						<h1>engineers</h1>
+						<h1>leaders</h1>
+						<h1>students</h1>
+					</div>
+				</div>
 			</div>
 
 			<div>
@@ -63,13 +73,19 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 <style>
 	/* --------- Hero Section --------- */
 	.hero {
-		background-image: linear-gradient(to bottom, white 10%, var(--blue-dark) 20%, var(--blue-dark) 85%, #ECF8FF 120%);
+		background-image: linear-gradient(to bottom, white 20%, var(--blue-dark) 25%, var(--blue-dark) 92%, var(--blue-light) 120%);
 		color: white;
 	}
 
+	.hero .logo {
+		background-image: linear-gradient(to right, #eaa12b7c 0%, #df713a7f 100%);
+	}
+
 	.hero-desc {
-		padding: 25px 15px 240px 15px;
-		gap: 50px;
+		padding: 15px 15px 240px 15px;
+		
+		max-width: 550px;
+		gap: 30px;
 		height: fit-content;
 	}
 
@@ -77,25 +93,50 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		height: fit-content;
 	}
 
-	.hero-desc div:nth-child(1) {
-		padding: 0 10px;
-		gap: 10px;
+	.hero-desc div:nth-of-type(2) {
+		gap: 20px;
 	}
-	.hero-desc h1:nth-child(2) {text-align: end;}
 
-	.hero-desc div:nth-child(2) {gap: 34px;}
+	#animated-text-viewport {
+		
+		align-self: end;
+		width: fit-content;
+		flex-direction: row;
+  		gap: 15px;
+  		height: 50px;
+		align-items: flex-start;
+		padding-top: 10px;
+		overflow: hidden;
+  		-webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 90%);
+ 	}
+
+	#animated-text-moving {
+		color: var(--orange);
+  		position: relative;
+  		animation: mymove 6s infinite;
+	}
+
+	@keyframes mymove {
+		30% {transform: translateY(calc(-1*var(--anim-translate-y)));}
+		60% {transform: translateY(calc(-2*var(--anim-translate-y)));}
+		90% {transform: translateY(calc(-3*var(--anim-translate-y)));}
+		90.05% {transform: translateY(0px);}
+	}
+
 	.hero-desc h2 {text-align: center;}
-
+	.hero-desc :nth-child(0) {
+		background-color:red;
+	}
 
 	#hero-logo {
-		max-width: 100px;
-		padding: 25px 0;
+		max-width: 154px;
+		padding: 10px 0;
 	}
 	#hero-img {
 		object-fit: cover;
 		justify-content: flex-end;
-		padding: 15px 0;
-		height: 300px;
+		height: 32vh;
+		filter: drop-shadow(0 0 8px rgb(0, 0, 0));
 	}
 
 
@@ -104,7 +145,7 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		height: fit-content;
 		padding: 150px 25px;
 		gap: 50px;
-		background-image: linear-gradient(to bottom, var(--blue-dark) -15%, #ECF8FF 20%, #ECF8FF 85%, #FFE4D6 120%);
+		background-image: linear-gradient(to bottom, var(--blue-dark) -3%, var(--blue-light) 8%, #ECF8FF 18%, #ECF8FF 80%,#FFE4D6 120%);
 		text-align: center;
 	}
 
@@ -120,7 +161,7 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		height: fit-content;
 		padding: 100px 25px;
 		gap: 25px;
-		background-image: linear-gradient(to bottom, #ECF8FF -15%, #FFE4D6 20%, #FFE4D6 85%, #FFF3E1 120%);
+		background-image: linear-gradient(to bottom, #ECF8FF -20%, #FFE4D6 20%, #FFE4D6 85%, #FFF3E1 120%);
 
 		background-color: #FFE4D6;
 		text-align: center;
@@ -129,7 +170,6 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 	.why-us .cards {
 		height: fit-content;
 		gap: 50px;
-		padding: 0 95px;
 	}
 
 

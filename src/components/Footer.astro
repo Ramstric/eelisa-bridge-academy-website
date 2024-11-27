@@ -1,10 +1,16 @@
 
 <footer transition:name="footer">
-    <div class="legal-text">
-        <a>Terms and conditions</a>
-        <a>Privacy policy</a>
-        <a>Cookies policy</a>
+    <div class="disclaimer">
+        <img id="white-logo" src="/eelisa-bridge-academy-website/images/logo-white.png" alt="SkillBridge Logo" />
+        <p>© 2021 SkillBridge. All rights reserved.</p>
+        <div class="legal-text">
+            <a>Website terms</a> |
+            <a>Privacy Policy</a> |
+            <a>Manage Cookies</a>
+        </div>
     </div>
+
+    
 </footer>
 
 <style>
@@ -20,21 +26,23 @@
         background-color: var(--blue-dark);
     }
 
-    .legal-text {
-        display: inline-block;
+    .disclaimer{gap: 10px;}
+
+    #white-logo {max-width: 80px;}
+
+    .disclaimer p {
         text-align: center;
+        color: rgba(255, 255, 255, 0.25);
+        font-size: 12px;
+    }
 
-        width: 100%;
-
+    .legal-text {
+        flex-direction: row;
+        text-align: center;
         color: white;
     }
 
-    .legal-text a {
-        color: var(--blue-light);
-    }
+    .legal-text a {color: var(--blue-light);font-size: var(--footer-mobile);}
 
-    a::after {
-        color: #ffffff;
-        content: " | ";
-    }
+
 </style>
