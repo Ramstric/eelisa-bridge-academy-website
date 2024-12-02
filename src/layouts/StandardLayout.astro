@@ -22,11 +22,9 @@ const { pageTitle } = Astro.props;
     </head>
 
     <body>
-        <!-- 
-        <div class="navbar" transition:name="nav">
-            <Navbar />
-        </div>
-        -->
+        
+        <Navbar />
+        
         
         <div class="main-slot">
             <slot />
@@ -57,13 +55,6 @@ const { pageTitle } = Astro.props;
         padding: 2rem;
     }
 
-    .navbar {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
-
-
     .main-slot {
         gap: 0;
     }
@@ -71,7 +62,16 @@ const { pageTitle } = Astro.props;
     .mobile-navbar {
         position: fixed;
         bottom: 2%;
+    }
 
+    @media (min-width: 767px) {
+        .mobile-navbar {
+            display: none;
+        }
+
+        .navbar {
+            display: none;
+        }
     }
 
 

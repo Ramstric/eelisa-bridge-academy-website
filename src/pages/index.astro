@@ -4,6 +4,7 @@ import '../styles/global.css'
 import StandardLayout from '../layouts/StandardLayout.astro';
 import Button from '../components/Button.astro';
 import SmallMobileCard from '../components/SmallMobileCard.astro';
+import LongDesktopCard from '../components/LongDesktopCard.astro';
 ---
 
 <StandardLayout pageTitle="Home">
@@ -11,13 +12,25 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		<div class="logo">
 			<img id="hero-logo" src="/eelisa-bridge-academy-website/images/logo.png" alt="SkillBridge Logo" />
 		</div>
-		<img id="hero-img" src="https://placehold.co/500" alt="SkillBridge Logo" />
+		<img id="hero-img" src="/eelisa-bridge-academy-website/images/hero.png" alt="SkillBridge Logo" />
 
 		<div class="hero-desc">
-			<div class="hero-desc-subtitle">
+			<div class="hero-desc-subtitle-mobile">
 				<h1>Building <i style="color: var(--yellow);">bridges</i> for...</h1>
 				<div id="animated-text-viewport">
 					<h1>...skilled</h1>
+					<div id="animated-text-moving">
+						<h1>students</h1>
+						<h1>engineers</h1>
+						<h1>leaders</h1>
+						<h1>students</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero-desc-subtitle-desktop">
+				<div id="animated-text-viewport">
+					<h1>Building <i style="color: var(--yellow);">bridges</i> for skilled</h1>
 					<div id="animated-text-moving">
 						<h1>students</h1>
 						<h1>engineers</h1>
@@ -36,11 +49,18 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 
 	<div class="offer">
 		<h1>What <i style="color: var(--blue-light);">we</i> offer...</h1>
-		<div class="cards">
-			<SmallMobileCard type="horizontal" title="Curriculum-Aligned Guidance" desc="From workshops to tailored learning paths, we keep you up to industry standards!" img="https://placehold.co/200" />
-			<SmallMobileCard type="horizontal" title="Meaningful Internships" desc="We collaborate with top companies and allow you to apply your skills in a professional setting!" img="https://placehold.co/200" />
-			<SmallMobileCard type="horizontal" title="Expert Mentorship" desc="Our mentors offer personalized advice, career planning, and insider knowledge!" img="https://placehold.co/200" />
-			<SmallMobileCard type="horizontal" title="Applied Projects" desc="Showcase your creativity and problem-solving skills while building a portfolio that stands out to employers!" img="https://placehold.co/200" />	
+		<div class="cards-mobile">
+			<SmallMobileCard type="horizontal" title="Curriculum-Aligned Guidance" desc="From workshops to tailored learning paths, we keep you up to industry standards!" img="/eelisa-bridge-academy-website/images/card-1.jpg" />
+			<SmallMobileCard type="horizontal" title="Meaningful Internships" desc="We collaborate with top companies and allow you to apply your skills in a professional setting!" img="/eelisa-bridge-academy-website/images/card-2.jpg" />
+			<SmallMobileCard type="horizontal" title="Expert Mentorship" desc="Our mentors offer personalized advice, career planning, and insider knowledge!" img="/eelisa-bridge-academy-website/images/card-3.jpg" />
+			<SmallMobileCard type="horizontal" title="Applied Projects" desc="Showcase your creativity and problem-solving skills while building a portfolio that stands out to employers!" img="/eelisa-bridge-academy-website/images/card-4.jpg" />	
+		</div>
+
+		<div class="cards-desktop">
+			<LongDesktopCard bg="#FFE6DA" title="Curriculum-Aligned Guidance" desc="From workshops to tailored learning paths, we keep you up to industry standards!" img="/eelisa-bridge-academy-website/images/card-1.jpg" />
+			<LongDesktopCard bg="#FFF1DC" title="Meaningful Internships" desc="We collaborate with top companies and allow you to apply your skills in a professional setting!" img="/eelisa-bridge-academy-website/images/card-2.jpg" />
+			<LongDesktopCard bg="#DCE4FF" title="Expert Mentorship" desc="Our mentors offer personalized advice, career planning, and insider knowledge!" img="/eelisa-bridge-academy-website/images/card-3.jpg" />
+			<LongDesktopCard bg="#DBF0FF" title="Applied Projects" desc="Showcase your creativity and problem-solving skills while building a portfolio that stands out to employers!" img="/eelisa-bridge-academy-website/images/card-4.jpg" />	
 		</div>
 
 	</div>
@@ -49,10 +69,16 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		<h1>Why choose <i style="color: var(--orange);">Skill</i><i style="color: var(--yellow);">Bridge</i>?</h1>
 		<p>With a vision to create a world where <b>every student enters the workforce equipped, confident, and ready</b> to excel—building a stronger connection between academia and industry.</p>
 		
-		<div class="cards">
-			<SmallMobileCard type="vertical" title="Real-World Relevance" img="https://placehold.co/200" />
-			<SmallMobileCard type="vertical" title="Personalized Support" img="https://placehold.co/200" />
-			<SmallMobileCard type="vertical" title="Career Readiness" img="https://placehold.co/200" />
+		<div class="cards-mobile">
+			<SmallMobileCard type="vertical" title="Real-World Relevance" img="/eelisa-bridge-academy-website/images/card-5.jpg" />
+			<SmallMobileCard type="vertical" title="Personalized Support" img="/eelisa-bridge-academy-website/images/card-6.jpg" />
+			<SmallMobileCard type="vertical" title="Career Readiness" img="/eelisa-bridge-academy-website/images/card-7.jpg" />
+		</div>
+
+		<div class="cards-desktop">
+			<SmallMobileCard type="vertical-l" title="Real-World Relevance" desc="Everything we offer is designed with industry input to ensure it meets current professional" img="/eelisa-bridge-academy-website/images/card-5.jpg" />
+			<SmallMobileCard type="vertical-l" title="Personalized Support" desc="From guidance to mentorship, we focus on your unique goals and strengths." img="/eelisa-bridge-academy-website/images/card-6.jpg" />
+			<SmallMobileCard type="vertical-l" title="Career Readiness" desc="By the time you graduate, you’ll have the skills, experience, and network to hit the ground running" img="/eelisa-bridge-academy-website/images/card-7.jpg" />
 		</div>
 	</div>
 
@@ -73,12 +99,12 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 <style>
 	/* --------- Hero Section --------- */
 	.hero {
-		background-image: linear-gradient(to bottom, white 20%, var(--blue-dark) 25%, var(--blue-dark) 92%, var(--blue-light) 120%);
+		background-image: linear-gradient(to bottom, var(--blue-dark) 25%, var(--blue-dark) 92%, var(--blue-light) 120%);
 		color: white;
 	}
 
 	.hero .logo {
-		background-image: linear-gradient(to right, #eaa12b7c 0%, #df713a7f 100%);
+		background-image: linear-gradient(to right, #ffc567 0%, #f9c4a9 100%);
 	}
 
 	.hero-desc {
@@ -93,12 +119,20 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		height: fit-content;
 	}
 
-	.hero-desc div:nth-of-type(2) {
+	.hero-desc div:nth-of-type(3) {
 		gap: 20px;
 	}
 
-	#animated-text-viewport {
-		
+	.hero-desc h2 {text-align: center;}
+	.hero-desc :nth-child(0) {
+		background-color:red;
+	}
+
+	.hero-desc-subtitle-desktop {
+		display: none;
+	}
+
+	.hero-desc-subtitle-mobile #animated-text-viewport {
 		align-self: end;
 		width: fit-content;
 		flex-direction: row;
@@ -114,7 +148,19 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		color: var(--orange);
   		position: relative;
   		animation: mymove 6s infinite;
+		width: fit-content;
 	}
+
+	.hero-desc-subtitle-desktop #animated-text-viewport {
+		width: fit-content;
+		gap: 15px;
+		flex-direction: row;
+  		height: 70px;
+		align-items: flex-start;
+		padding-top: 10px;
+		overflow: hidden;
+  		-webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 90%);
+ 	}
 
 	@keyframes mymove {
 		30% {transform: translateY(calc(-1*var(--anim-translate-y)));}
@@ -123,10 +169,7 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		90.05% {transform: translateY(0px);}
 	}
 
-	.hero-desc h2 {text-align: center;}
-	.hero-desc :nth-child(0) {
-		background-color:red;
-	}
+	
 
 	#hero-logo {
 		max-width: 154px;
@@ -139,6 +182,23 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		filter: drop-shadow(0 0 8px rgb(0, 0, 0));
 	}
 
+	@media (min-width: 767px) {
+		.hero .logo {display: none;}
+		#hero-img {height: 50vh;margin-top: 90px;}
+		.hero-desc {
+			max-width: 95%;
+		}
+		.hero-desc-subtitle-mobile {display: none;}
+		.hero-desc-subtitle-desktop {display: flex;}
+
+		@keyframes mymove {
+		30% {transform: translateY(calc(-1*var(--anim-translate-y-desktop)));}
+		60% {transform: translateY(calc(-2*var(--anim-translate-y-desktop)));}
+		90% {transform: translateY(calc(-3*var(--anim-translate-y-desktop)));}
+		90.05% {transform: translateY(0px);}
+	}
+	}
+
 
 	/* --------- Offer Section --------- */
 	.offer {
@@ -149,12 +209,27 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		text-align: center;
 	}
 
-	.offer .cards {
+	.offer .cards-mobile {
 		height: fit-content;
 		gap: 50px;
 	}
 
+	.offer .cards-desktop {
+		display: none;
+		gap: 20px;
+	}
 
+	@media (min-width: 767px) {
+		.offer .cards-mobile {
+			display: none;
+		}
+
+		.offer .cards-desktop {
+			display: flex;
+		}
+
+
+	}
 
 	/* --------- Why Us Section --------- */
 	.why-us {
@@ -167,11 +242,27 @@ import SmallMobileCard from '../components/SmallMobileCard.astro';
 		text-align: center;
 	}
 
-	.why-us .cards {
+	.why-us .cards-mobile {
 		height: fit-content;
 		gap: 50px;
 	}
 
+	.why-us .cards-desktop {
+		display: none;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+
+	@media (min-width: 767px) {
+		.why-us .cards-mobile {
+			display: none;
+		}
+
+		.why-us .cards-desktop {
+			display: flex;
+		}
+	}
 
 	/* --------- Join Us Section --------- */
 	.join-us {

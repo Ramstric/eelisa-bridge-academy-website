@@ -1,0 +1,45 @@
+---
+const { bg, title, desc, img} = Astro.props;
+
+---
+
+<div class="card">
+    <img src={img} alt={title} />
+
+    <div>
+        <h3>{title}</h3>
+        <p>{desc}</p>
+    </div>
+
+</div>
+
+<!-- ------ Local style ------ -->
+
+<style define:vars={{ bg: bg}}>
+    .card {
+        flex-direction: row;
+        align-items: center;
+        gap: 35px;
+        text-align: start;
+
+        height: 120px;
+        max-width: 95%;
+
+        border-radius: var(--card-roundness);
+        background-color: var(--bg);
+    }
+
+    .card div{
+        height: fit-content;
+        gap: 20px;
+        padding: 8px 0;
+    }
+
+    .card img {
+        object-fit: cover;
+        width: 30%;
+        height: 100%;
+        border-radius: var(--card-roundness);
+    }
+
+</style>

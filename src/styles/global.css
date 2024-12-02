@@ -15,20 +15,22 @@ pink{color:var(--pink);}
 
 :root {
   /* --------------- Desktop Font Options --------------- */
-  --h1-desktop: clamp(2.875rem, 2.4rem + 0.816vw, 3.625rem); /* 58px to 46px */
-  --h3-desktop: clamp(1.125rem, 0.857rem + 0.714vw, 1.5rem);    /* 24px to 18px */
+  --h1-desktop: 45px; /* 32px */
+  --h2-desktop: 32px; /* 24px */
+  --h3-desktop: 26px; /* 18px */
 
-  --p-desktop: clamp(0.938rem, 0.823rem + 0.408vw, 1.313rem);  /* 21px to 15px */
-  
-  --footer-desktop: clamp(0.625rem, 0.51rem + 0.408vw, 1rem);  /* 16px to 10px */
+  --p-desktop: 20px; /* 14px */
+  --p-btn-desktop: 20px; /* 20px */
+
+  --footer-desktop: 10px; /* From 10px */
+  --anim-translate-y-desktop: 55px;
 
   /* ------- Mobile Font Options - 320px to 500px ------- */
-  
   --h1-mobile: clamp(1.625rem, 0.958rem + 3.333vw, 2rem); /* From 26px to 32px */
   --h2-mobile: clamp(1.125rem, 0.458rem + 3.333vw, 1.5rem); /* From 18px to 24px */
   --h3-mobile: clamp(1rem, 0.778rem + 1.111vw, 1.125rem); /* From 16px to 18px */
 
-  --p-mobile: 14px; /* From 14px to 14px */
+  --p-mobile: 14px;
   --p-btn-mobile: clamp(1rem, 0.556rem + 2.222vw, 1.25rem); /* From 16px to 20px */
 
   --footer-mobile: 12px; /* From 8px to 10px */
@@ -48,7 +50,7 @@ pink{color:var(--pink);}
   --yellow: #EAA12B;
 
   --btn-roundness: 25px;
-  --card-roundness: 15px;
+  --card-roundness: 25px;
 }
 
 /* ------------------ Common elements ------------------ */
@@ -127,6 +129,14 @@ b {
 
 a {text-decoration: none; color: #9d9d9d;transition: all 0.25s ease;}
 
+@media (min-width: 767px) {
+  h1 { font-size: var(--h1-desktop); }
+  h2 { font-size: var(--h2-desktop); }
+  h3 { font-size: var(--h3-desktop); }
+
+  p { font-size: var(--p-desktop); }
+  p-btn { font-size: var(--p-btn-desktop); }
+}
 
 blue {color: var(--blue-light);}
 green {color: var(--green);}

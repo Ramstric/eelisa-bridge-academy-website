@@ -33,7 +33,7 @@ const cardType = `${type}`;
     }
 
     .horizontal img {
-        object-fit: none;
+        object-fit: cover;
         width: 35%;
         height: 100%;
         border-radius: var(--card-roundness);
@@ -48,8 +48,22 @@ const cardType = `${type}`;
     }
 
     .vertical img {
-        object-fit: none;
-        height: 150px;
+        object-fit: cover;
+        height: 20%;
+        border-radius: var(--card-roundness);
+    }
+
+
+    .vertical-l {
+        gap: 10px;
+        text-align: center;
+        height: fit-content;
+        max-width: 400px;
+    }
+
+    .vertical-l img {
+        object-fit: cover;
+        max-height: 225px;
         border-radius: var(--card-roundness);
     }
 
